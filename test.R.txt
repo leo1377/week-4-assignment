@@ -1,0 +1,5 @@
+g <- function() {
+print(4)
+a<-3
+invisible(a)
+}
