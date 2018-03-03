@@ -24,9 +24,7 @@ best <- function(state, outcome) { #this function finds the best hospital in a g
     heart_failure <- x[z,c(1,4)] #a new data frame with two collumns: hospital name, and value(only from the selected state)
     heart_failure[,2] <- as.numeric(heart_failure[,2])
     heart_failure <- heart_failure[complete.cases(heart_failure),] #im taking complete cases
-    print(heart_failure)
     best_hospitals <- heart_failure[heart_failure[,2]==min(heart_failure[,2]),1]
-    print(best_hospitals)
     #I take the names of hospitals with the least level of outcome
     return(sort(best_hospitals)[1])
   }
